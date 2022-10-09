@@ -23,6 +23,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func SubmitClicked(_ sender: Any) {
+
+        alertView()
+    }
+}
+
+extension ViewController {
+    func alertView() {
         //Title - "Title of the alert box"
         //Message - "Message to be shown in the alert box"
         // UIAlertControllerStyle - "Style of the alert Controller"
@@ -41,4 +48,3 @@ class ViewController: UIViewController {
         
     }
 }
-
