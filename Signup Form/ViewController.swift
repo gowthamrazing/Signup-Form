@@ -24,7 +24,33 @@ class ViewController: UIViewController {
 
     @IBAction func SubmitClicked(_ sender: Any) {
 
-        alertView()
+        if (userNameTextField.text == nil) || (passwordTextField.text == nil) || (confirmPasswordTextField.text == nil) {
+            let alert = UIAlertController(title: "Error", message: "Please Enter All fields", preferredStyle: UIAlertController.Style.alert)
+            let okButton = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
+            alert.addAction(okButton)
+            self.present(alert, animated: true, completion: nil)
+        } else if userNameTextField.text == "" {
+            let alert = UIAlertController(title: "Error", message: "Please Enter Username", preferredStyle: UIAlertController.Style.alert)
+            let okButton = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
+            alert.addAction(okButton)
+            self.present(alert, animated: true, completion: nil)
+        }else if passwordTextField.text == "" {
+            let alert = UIAlertController(title: "Error", message: "Please Enter Password", preferredStyle: UIAlertController.Style.alert)
+            let okButton = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
+            alert.addAction(okButton)
+            self.present(alert, animated: true, completion: nil)
+        } else if passwordTextField.text != confirmPasswordTextField.text {
+            let alert = UIAlertController(title: "Error", message: "Passwords Mismatched", preferredStyle: UIAlertController.Style.alert)
+            let okButton = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
+            alert.addAction(okButton)
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            let alert = UIAlertController(title: "Error", message: "User is logged In", preferredStyle: UIAlertController.Style.alert)
+            let okButton = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
+            alert.addAction(okButton)
+            self.present(alert, animated: true, completion: nil)
+        }
+        //alertView()
     }
 }
 
