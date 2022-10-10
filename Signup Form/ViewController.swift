@@ -25,41 +25,25 @@ class ViewController: UIViewController {
     @IBAction func SubmitClicked(_ sender: Any) {
 
         if (userNameTextField.text == nil) || (passwordTextField.text == nil) || (confirmPasswordTextField.text == nil) {
-            let alert = UIAlertController(title: "Error", message: "Please Enter All fields", preferredStyle: UIAlertController.Style.alert)
-            let okButton = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
-            alert.addAction(okButton)
-            self.present(alert, animated: true, completion: nil)
+           alertView(titleInput: ERROR_TITLE, messageInput: MISSING_FIELDS)
         } else if userNameTextField.text == "" {
-            let alert = UIAlertController(title: "Error", message: "Please Enter Username", preferredStyle: UIAlertController.Style.alert)
-            let okButton = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
-            alert.addAction(okButton)
-            self.present(alert, animated: true, completion: nil)
+           alertView(titleInput: ERROR_TITLE, messageInput: MISSING_USERNAME)
         }else if passwordTextField.text == "" {
-            let alert = UIAlertController(title: "Error", message: "Please Enter Password", preferredStyle: UIAlertController.Style.alert)
-            let okButton = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
-            alert.addAction(okButton)
-            self.present(alert, animated: true, completion: nil)
+           alertView(titleInput: ERROR_TITLE, messageInput: MISSING_PASSWORD)
         } else if passwordTextField.text != confirmPasswordTextField.text {
-            let alert = UIAlertController(title: "Error", message: "Passwords Mismatched", preferredStyle: UIAlertController.Style.alert)
-            let okButton = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
-            alert.addAction(okButton)
-            self.present(alert, animated: true, completion: nil)
+            alertView(titleInput: ERROR_TITLE, messageInput: MISMATCHED_PASSWORD)
         } else {
-            let alert = UIAlertController(title: "Error", message: "User is logged In", preferredStyle: UIAlertController.Style.alert)
-            let okButton = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
-            alert.addAction(okButton)
-            self.present(alert, animated: true, completion: nil)
+            alertView(titleInput: SUCCESS_TITLE, messageInput: USER_ADDED)
         }
-        //alertView()
     }
 }
 
 extension ViewController {
-    func alertView() {
+    func alertView(titleInput: String, messageInput: String) {
         //Title - "Title of the alert box"
         //Message - "Message to be shown in the alert box"
         // UIAlertControllerStyle - "Style of the alert Controller"
-        let alert = UIAlertController(title: "Error", message: "Please Enter all Fields", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: titleInput, message: messageInput, preferredStyle: UIAlertController.Style.alert)
         
         //Button action to show the ok button in the alert
         let okButton = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) { (UIAlertAction) in

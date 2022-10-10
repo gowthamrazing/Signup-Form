@@ -13,6 +13,7 @@
 		082C34C128F2A77E0032A0A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 082C34BF28F2A77E0032A0A8 /* Main.storyboard */; };
 		082C34C328F2A7830032A0A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 082C34C228F2A7830032A0A8 /* Assets.xcassets */; };
 		082C34C628F2A7830032A0A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 082C34C428F2A7830032A0A8 /* LaunchScreen.storyboard */; };
+		089EDC2628F43EA0005E7DC0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089EDC2528F43EA0005E7DC0 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		082C34C228F2A7830032A0A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		082C34C528F2A7830032A0A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		082C34C728F2A7830032A0A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		089EDC2528F43EA0005E7DC0 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				082C34B928F2A77E0032A0A8 /* AppDelegate.swift */,
+				089EDC2528F43EA0005E7DC0 /* Constant.swift */,
 				082C34BB28F2A77E0032A0A8 /* SceneDelegate.swift */,
 				082C34BD28F2A77E0032A0A8 /* ViewController.swift */,
 				082C34BF28F2A77E0032A0A8 /* Main.storyboard */,
@@ -141,6 +144,7 @@
 				082C34BE28F2A77E0032A0A8 /* ViewController.swift in Sources */,
 				082C34BA28F2A77E0032A0A8 /* AppDelegate.swift in Sources */,
 				082C34BC28F2A77E0032A0A8 /* SceneDelegate.swift in Sources */,
+				089EDC2628F43EA0005E7DC0 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
